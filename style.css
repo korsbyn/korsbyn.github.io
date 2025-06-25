@@ -1,15 +1,42 @@
-/* Grundlayout */
-body, html {
+ MSEK, +15% efficiency</p>
+        <span>2023</span>
+      </div>
+      <div class="card">
+        <h3>Healthcare Systems Upgrade</h3>
+        <p>100% uptime, regulatory compliance</p>
+        <span>2024</span>
+      </div>
+      <div class="card">
+        <h3>Lean Overhaul</h3>
+        <p>32× tool life, 1 MSEK savings/year</p>
+        <span>2021</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section section-dark">
+    <h2>Get in Touch</h2>
+    <p>Email: <a href="mailto:dannesoderqvist@gmail.com">dannesoderqvist@gmail.com</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/danielsoderqvist" target="_blank">linkedin.com/in/danielsoderqvist</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Daniel Söderqvist. Hosted on GitHub Pages & Cloudflare.</p>
+  </footer>
+</body>
+</html>
+
+/* style.css */
+html, body {
   margin: 0;
   padding: 0;
   height: 100%;
   font-family: "Segoe UI", sans-serif;
-  color: white;
-  background: transparent;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
-/* Video-bakgrund */
+/* Hero video */
 #heroVideo {
   position: fixed;
   top: 0;
@@ -20,54 +47,108 @@ body, html {
   z-index: -1;
 }
 
-/* Centrerat innehåll */
+/* Main content overlay */
 .content {
   position: relative;
   z-index: 1;
   text-align: center;
   top: 50%;
   transform: translateY(-50%);
-  padding: 1rem;
-  background-color: rgba(0, 0, 0, 0.4); /* halvtransparent bakgrund */
-  border-radius: 1rem;
-  margin: 0 auto;
-  width: 90%;
+  padding: 2rem;
   max-width: 400px;
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 1rem;
+  color: #fff;
 }
-
-/* Profilbild */
 .profile-img {
   width: 140px;
   height: 140px;
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 1rem;
-  border: 3px solid white;
+  border: 3px solid #fff;
 }
-
-/* Rubrik */
-h1 {
-  font-size: 1.8rem;
-  margin: 0.2rem 0;
+.content h1 {
+  font-size: 2rem;
+  margin: 0.5rem 0;
 }
-
-/* Beskrivning */
-p {
+.content p {
   font-size: 1rem;
   margin-bottom: 1.5rem;
 }
-
-/* Knapp */
 .button {
   display: inline-block;
-  background-color: #007bff;
-  color: white;
-  padding: 0.7rem 1.4rem;
+  background-color: #0073e6;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
   text-decoration: none;
   border-radius: 8px;
   font-weight: bold;
   transition: background 0.3s ease;
 }
 .button:hover {
-  background-color: #0056b3;
+  background-color: #005bb5;
+}
+
+/* Section styling */
+.section {
+  padding: 4rem 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.section-light {
+  background: #fff;
+  color: #333;
+}
+.section-dark {
+  background: #f4f4f4;
+  color: #333;
+}
+
+/* Skills grid */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.skill {
+  background: #0073e6;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 5px;
+}
+
+/* Experience cards */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.card {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  flex: 1 1 calc(33% - 1rem);
+  border-radius: 5px;
+  text-align: center;
+}
+.card h3 {
+  margin-top: 0;
+}
+.card span {
+  display: block;
+  margin-top: 0.5rem;
+  color: #666;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: #222;
+  color: #fff;
 }
