@@ -1,0 +1,54 @@
+/* Grundläggande återställning */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Kroppen */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #f8f8f8;
+  color: #333;
+}
+
+/* Navigation */
+nav ul {
+  display: flex;
+  list-style: none;
+  background: #004d40;
+  padding: 10px;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Hero-sektionen */
+.hero {
+  background: linear-gradient(135deg, #00796B, #26A69A);
+  padding: 60px;
+  color: white;
+  text-align: center;
+}
+
+/* Sektioner */
+section {
+  padding: 20px;
+  margin: 20px 0;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #004d40;
+  color: white;
+}
