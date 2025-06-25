@@ -11,9 +11,26 @@ body {
   padding: 2rem;
 }
 .hero {
-  background: #f4f4f4;
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
   text-align: center;
-  padding: 4rem 0;
+  color: #fff;
+}
+.bg-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+.hero-content {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
 .profile-img {
   width: 150px;
@@ -21,9 +38,10 @@ body {
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 1rem;
+  border: 4px solid #fff;
 }
 .hero h1 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin: 0.5rem 0;
 }
 .hero p {
@@ -40,6 +58,7 @@ body {
 }
 .section-light {
   background: #fff;
+  color: #333;
 }
 .section-dark {
   background: #efefef;
