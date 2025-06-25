@@ -1,54 +1,38 @@
- MSEK, +15% efficiency</p>
-        <span>2023</span>
-      </div>
-      <div class="card">
-        <h3>Healthcare Systems Upgrade</h3>
-        <p>100% uptime, regulatory compliance</p>
-        <span>2024</span>
-      </div>
-      <div class="card">
-        <h3>Lean Overhaul</h3>
-        <p>32× tool life, 1 MSEK savings/year</p>
-        <span>2021</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="section section-dark">
-    <h2>Get in Touch</h2>
-    <p>Email: <a href="mailto:dannesoderqvist@gmail.com">dannesoderqvist@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/danielsoderqvist" target="_blank">linkedin.com/in/danielsoderqvist</a></p>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Daniel Söderqvist. Hosted on GitHub Pages & Cloudflare.</p>
-  </footer>
-</body>
-</html>
-
 /* style.css */
 html, body {
   margin: 0;
   padding: 0;
   height: 100%;
   font-family: "Segoe UI", sans-serif;
+  color: #333;
   overflow-x: hidden;
 }
 
-/* Hero video */
-#heroVideo {
-  position: fixed;
+/* Hero */
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+.hero-video {
+  position: absolute;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+  z-index: -2;
+}
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
   z-index: -1;
 }
-
-/* Main content overlay */
-.content {
+.hero-content {
   position: relative;
   z-index: 1;
   text-align: center;
@@ -69,11 +53,11 @@ html, body {
   margin-bottom: 1rem;
   border: 3px solid #fff;
 }
-.content h1 {
+.hero-content h1 {
   font-size: 2rem;
   margin: 0.5rem 0;
 }
-.content p {
+.hero-content p {
   font-size: 1rem;
   margin-bottom: 1.5rem;
 }
@@ -99,11 +83,9 @@ html, body {
 }
 .section-light {
   background: #fff;
-  color: #333;
 }
 .section-dark {
   background: #f4f4f4;
-  color: #333;
 }
 
 /* Skills grid */
@@ -145,7 +127,11 @@ html, body {
   color: #666;
 }
 
-/* Footer */
+/* Contact and Footer */
+#contact a {
+  color: #0073e6;
+  text-decoration: none;
+}
 footer {
   text-align: center;
   padding: 2rem 1rem;
