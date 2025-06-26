@@ -1,49 +1,108 @@
-<section id="skills" class="section bg-light">
-  <div class="container">
-    <h2>Skills</h2>
-    <div class="skills-grid">
-      <div class="skill">Project Management</div>
-      <div class="skill">Electrical & Automation</div>
-      <div class="skill">Lean & Agile</div>
-      <div class="skill">Infrastructure Strategy</div>
-      <div class="skill">Stakeholder Engagement</div>
-      <div class="skill">Regulatory Compliance</div>
-    </div>
-  </div>
-</section>
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daniel Söderqvist – Teknisk Ledare & Kreativ Problemlösare</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">Daniel Söderqvist</div>
+      <ul>
+        <li><a href="#about">Om mig</a></li>
+        <li><a href="#services">Tjänster</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Kontakt</a></li>
+      </ul>
+    </nav>
+    <section class="hero" style="background-image: url('hero.jpg');">
+      <div class="hero-content">
+        <img src="profile.jpg" alt="Daniel Söderqvist" class="profile-pic">
+        <h1>Daniel Söderqvist</h1>
+        <p>Teknisk ledare inom el, automation & innovation – med passion för smarta lösningar och kreativitet i praktiken.</p>
+        <a href="#contact" class="cta-button">Kontakta mig</a>
+      </div>
+    </section>
+  </header>
 
-<section id="projects" class="section">
-  <div class="container">
-    <h2>Projects</h2>
-    <div class="project-cards">
-      <div class="project-card">
-        <h3>Data Center Buildout</h3>
-        <p>Led a team to deliver a high-availability data center, boosting efficiency by 15%.</p>
+  <main>
+    <section id="about" class="about">
+      <div class="container">
+        <h2>Om mig</h2>
+        <p>Jag är avdelningschef på en teknisk avdelning med omfattande erfarenhet inom el, mekanik, PLC, robotik och automation. Med ett kreativt förhållningssätt och gedigen praktisk erfarenhet har jag lett både människor och teknik till lösningar som gör skillnad.</p>
       </div>
-      <div class="project-card">
-        <h3>Healthcare Systems Upgrade</h3>
-        <p>Upgraded IT infrastructure with zero downtime and ensured full EU compliance.</p>
-      </div>
-      <div class="project-card">
-        <h3>Lean Manufacturing Overhaul</h3>
-        <p>Implemented Lean processes, saving 1M SEK annually through optimization.</p>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<section id="contact" class="section bg-light">
-  <div class="container">
-    <h2>Contact</h2>
-    <form id="contactForm" class="contact-form">
-      <label for="name">Name</label>
-      <input type="text" id="name" name="name" placeholder="Your Name" required />
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" placeholder="Your Email" required />
-      <label for="message">Message</label>
-      <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit" class="btn btn-secondary">Send Message</button>
-      <div id="formFeedback" class="form-feedback"></div>
-    </form>
-  </div>
-</section>
+    <section id="services" class="services">
+      <div class="container">
+        <h2>Tjänster</h2>
+        <div class="cards">
+          <div class="card">
+            <img src="icon-consulting.png" alt="Rådgivning">
+            <h3>Teknisk Rådgivning</h3>
+            <p>Stöd i komplexa tekniska beslut, både strategiska och praktiska.</p>
+          </div>
+          <div class="card">
+            <img src="icon-project.png" alt="Projektledning">
+            <h3>Projektledning</h3>
+            <p>Erfaren ledare av tekniska projekt från idé till leverans.</p>
+          </div>
+          <div class="card">
+            <img src="icon-training.png" alt="Utbildning">
+            <h3>Utbildning & Mentorskap</h3>
+            <p>Utbildningar inom el, automation och tekniskt ledarskap.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio" class="portfolio">
+      <div class="container">
+        <h2>Portfolio</h2>
+        <div class="grid">
+          <div class="portfolio-item">
+            <img src="project1.jpg" alt="Smart eldistribution">
+            <h4>Smart eldistribution i industrimiljö</h4>
+          </div>
+          <div class="portfolio-item">
+            <img src="project2.jpg" alt="Robotplattformar">
+            <h4>Utveckling av fjärrstyrda robotplattformar</h4>
+          </div>
+          <div class="portfolio-item">
+            <img src="project3.jpg" alt="Digitalisering underhåll">
+            <h4>Digitalisering av tekniskt underhållsflöde</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2>Kontakt</h2>
+        <form>
+          <label for="name">Namn</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">E-post</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="message">Meddelande</label>
+          <textarea id="message" name="message" required></textarea>
+
+          <button type="submit">Skicka</button>
+        </form>
+        <p>Eller mejla direkt till: <a href="mailto:kontakt@thesoderqvist.com">kontakt@thesoderqvist.com</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Daniel Söderqvist. Alla rättigheter förbehållna.</p>
+    </div>
+  </footer>
+</body>
+</html>
