@@ -4,78 +4,84 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Daniel Söderqvist • Technical Program Manager</title>
-  <meta name="description" content="Technical leader in infrastructure, automation & digital transformation." />
+  <meta name="description" content="Technical Program Manager with expertise in infrastructure, automation, and digital transformation." />
   <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
 </head>
 <body>
-  <header class="navbar">
+  <nav class="navbar">
     <div class="container">
-      <h1 class="logo">Daniel Söderqvist</h1>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+      <span class="logo">Daniel Söderqvist</span>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </div>
-  </header>
+  </nav>
 
-  <section class="hero">
+  <header class="hero">
     <div class="container hero-content">
-      <img src="profile.jpg" alt="Daniel Söderqvist" class="hero-img" />
-      <div>
-        <h2>Technical Program Manager</h2>
-        <p>Experienced leader in infrastructure, automation, and digital transformation.</p>
-        <a href="#contact" class="btn">Let's connect</a>
+      <img src="profile.jpg" alt="Daniel Söderqvist" class="hero-image" />
+      <div class="hero-text">
+        <h1>Hi, I'm Daniel Söderqvist</h1>
+        <p>Technical Program Manager | Infrastructure | Automation | Innovation</p>
+        <a href="#contact" class="btn-primary">Get in Touch</a>
       </div>
     </div>
-  </section>
+  </header>
 
   <section id="about" class="section">
     <div class="container">
       <h2>About Me</h2>
-      <p>I’m Daniel Söderqvist, a technical leader with 15+ years of experience in electrical engineering, automation, and infrastructure delivery. I lead large-scale projects—from data centers to healthcare systems—on time and within budget.</p>
+      <p>I’m Daniel Söderqvist, a strategic leader with 15+ years in electrical engineering, automation, and infrastructure. I deliver complex projects on time and within budget by bridging deep technical insight with clear strategic direction.</p>
     </div>
   </section>
 
-  <section id="skills" class="section bg-light">
+  <section id="skills" class="section section-alt">
     <div class="container">
-      <h2>Skills</h2>
+      <h2>Core Skills</h2>
       <ul class="skills-list">
-        <li>Infrastructure Engineering</li>
-        <li>Automation Systems</li>
+        <li>Project & Program Management</li>
+        <li>Electrical & Automation Systems</li>
         <li>Digital Transformation</li>
-        <li>Leadership & Coaching</li>
-        <li>Project Management</li>
+        <li>Lean & Process Optimization</li>
+        <li>Stakeholder Communication</li>
+        <li>Compliance & Risk Management</li>
       </ul>
     </div>
   </section>
 
   <section id="projects" class="section">
     <div class="container">
-      <h2>Projects</h2>
-      <div class="project">
-        <h3>Data Center Buildout</h3>
-        <p>Led a cross-functional team to deliver a high-availability data center on time and below budget.</p>
-      </div>
-      <div class="project">
-        <h3>Healthcare Systems Upgrade</h3>
-        <p>Upgraded IT and facility infrastructure with zero downtime, ensuring EU compliance and increasing service performance.</p>
+      <h2>Selected Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <h3>Data Center Buildout</h3>
+          <p>Led cross-functional delivery of a high-availability facility increasing efficiency by 15%.</p>
+        </div>
+        <div class="project-card">
+          <h3>Healthcare Systems Upgrade</h3>
+          <p>Modernized IT infrastructure with zero downtime and full regulatory compliance.</p>
+        </div>
+        <div class="project-card">
+          <h3>Lean Manufacturing</h3>
+          <p>Introduced Lean principles saving 1M SEK annually through improved tooling and automation.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <section id="contact" class="section bg-light">
+  <section id="contact" class="section section-alt">
     <div class="container">
       <h2>Contact</h2>
-      <form id="contactForm">
+      <form id="contactForm" class="contact-form">
         <input type="text" name="name" placeholder="Your Name" required />
         <input type="email" name="email" placeholder="Your Email" required />
         <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-        <button type="submit" class="btn">Send</button>
+        <button type="submit" class="btn-primary">Send</button>
+        <p id="formFeedback"></p>
       </form>
     </div>
   </section>
