@@ -1,10 +1,21 @@
-/* style.css */
+:root {
+  --primary: #0073e6;
+  --primary-dark: #005bb5;
+  --background-light: #fff;
+  --background-dark: #f4f4f4;
+  --background-footer: #222;
+  --text-dark: #333;
+  --text-light: #fff;
+  --card-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
 html, body {
   margin: 0;
   padding: 0;
   height: 100%;
   font-family: "Segoe UI", sans-serif;
-  color: #333;
+  color: var(--text-dark);
+  background: var(--background-light);
   overflow-x: hidden;
 }
 
@@ -13,6 +24,10 @@ html, body {
   position: relative;
   height: 100vh;
   overflow: hidden;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .hero-video {
   position: absolute;
@@ -36,14 +51,13 @@ html, body {
   position: relative;
   z-index: 1;
   text-align: center;
-  top: 50%;
-  transform: translateY(-50%);
   padding: 2rem;
   max-width: 400px;
   margin: 0 auto;
   background-color: rgba(0, 0, 0, 0.6);
   border-radius: 1rem;
-  color: #fff;
+  color: var(--text-light);
+  box-shadow: var(--card-shadow);
 }
 .profile-img {
   width: 140px;
@@ -51,7 +65,7 @@ html, body {
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 1rem;
-  border: 3px solid #fff;
+  border: 3px solid var(--text-light);
 }
 .hero-content h1 {
   font-size: 2rem;
@@ -63,16 +77,22 @@ html, body {
 }
 .button {
   display: inline-block;
-  background-color: #0073e6;
-  color: #fff;
+  background-color: var(--primary);
+  color: var(--text-light);
   padding: 0.75rem 1.5rem;
   text-decoration: none;
   border-radius: 8px;
   font-weight: bold;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, outline 0.2s;
+  outline: none;
+  border: none;
+  cursor: pointer;
 }
-.button:hover {
-  background-color: #005bb5;
+.button:hover,
+.button:focus {
+  background-color: var(--primary-dark);
+  outline: 2px solid var(--text-light);
+  outline-offset: 2px;
 }
 
 /* Section styling */
@@ -82,10 +102,10 @@ html, body {
   margin: 0 auto;
 }
 .section-light {
-  background: #fff;
+  background: var(--background-light);
 }
 .section-dark {
-  background: #f4f4f4;
+  background: var(--background-dark);
 }
 
 /* Skills grid */
@@ -96,11 +116,18 @@ html, body {
   margin-top: 1rem;
 }
 .skill {
-  background: #0073e6;
-  color: #fff;
+  background: var(--primary);
+  color: var(--text-light);
   padding: 1rem;
   text-align: center;
   border-radius: 5px;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+.skill:hover,
+.skill:focus {
+  background: var(--primary-dark);
+  outline: 2px solid var(--primary-dark);
 }
 
 /* Experience cards */
@@ -111,12 +138,22 @@ html, body {
   margin-top: 1rem;
 }
 .card {
-  background: #fff;
+  background: var(--background-light);
   border: 1px solid #ddd;
   padding: 1rem;
   flex: 1 1 calc(33% - 1rem);
   border-radius: 5px;
   text-align: center;
+  transition: box-shadow 0.2s, transform 0.2s;
+  box-shadow: none;
+  cursor: pointer;
+}
+.card:hover,
+.card:focus {
+  box-shadow: var(--card-shadow);
+  transform: translateY(-4px) scale(1.03);
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
 }
 .card h3 {
   margin-top: 0;
@@ -129,12 +166,52 @@ html, body {
 
 /* Contact and Footer */
 #contact a {
-  color: #0073e6;
+  color: var(--primary);
   text-decoration: none;
+  word-break: break-all;
+}
+#contact a:focus,
+#contact a:hover {
+  text-decoration: underline;
+  outline: 2px solid var(--primary-dark);
 }
 footer {
   text-align: center;
   padding: 2rem 1rem;
-  background: #222;
-  color: #fff;
+  background: var(--background-footer);
+  color: var(--text-light);
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .cards {
+    flex-direction: column;
+  }
+  .card {
+    flex: 1 1 100%;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-content {
+    max-width: 95vw;
+    padding: 1rem;
+  }
+  .section {
+    padding: 2rem 0.5rem;
+  }
+  .cards {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .card {
+    padding: 0.75rem;
+  }
+}
+
+/* Accessibility focus for keyboard navigation */
+:focus {
+  outline: 2px solid var(--primary-dark);
+  outline-offset: 2px;
 }
