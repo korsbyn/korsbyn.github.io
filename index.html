@@ -12,22 +12,17 @@
   <meta property="og:url" content="https://korsbyn.github.io">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="style.css" />
-  <script>
-    // Smooth scroll for anchor links
-    document.addEventListener("DOMContentLoaded", function() {
-      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener("click", function(e) {
-          const target = document.querySelector(this.getAttribute("href"));
-          if (target) {
-            e.preventDefault();
-            target.scrollIntoView({ behavior: "smooth" });
-          }
-        });
-      });
-    });
-  </script>
+  <script defer src="script.js"></script>
 </head>
 <body>
+  <!-- Dark Mode Toggle -->
+  <button class="dark-toggle" id="darkToggle" aria-label="Toggle dark mode">
+    <span id="darkIcon">🌙</span>
+  </button>
+  
+  <!-- Back to Top -->
+  <button id="backToTop" aria-label="Back to top">↑</button>
+  
   <!-- Hero Section -->
   <header class="hero">
     <video autoplay muted loop playsinline class="hero-video" aria-label="Background video of technology and infrastructure">
@@ -35,16 +30,16 @@
       Your browser does not support the video tag.
     </video>
     <div class="hero-overlay"></div>
-    <div class="hero-content">
+    <div class="hero-content animate-in">
       <img src="profile.jpg" alt="Portrait of Daniel Söderqvist" class="profile-img" loading="lazy" />
-      <h1>Daniel Söderqvist</h1>
+      <h1><span class="wave">👋</span> Daniel Söderqvist</h1>
       <p>Technical leader in infrastructure, automation & digital transformation.</p>
       <a href="#contact" class="button" tabindex="0">Let’s talk ↗</a>
     </div>
   </header>
 
   <!-- About Section -->
-  <section id="about" class="section section-light">
+  <section id="about" class="section section-light animate-in">
     <h2>About Me</h2>
     <p>I’m Daniel Söderqvist, a technical leader with 15+ years of experience in electrical engineering, automation, and infrastructure delivery. I lead large-scale projects—from data centers to healthcare systems—on time and within budget.</p>
     <h3>My Vision</h3>
@@ -56,48 +51,99 @@
   </section>
 
   <!-- Skills Section -->
-  <section id="skills" class="section section-dark">
+  <section id="skills" class="section section-dark animate-in">
     <h2>Core Competencies</h2>
     <div class="skills-grid">
-      <div class="skill">Electrical &amp; Automation</div>
-      <div class="skill">Project Management</div>
-      <div class="skill">Digital Transformation</div>
-      <div class="skill">Data Center Construction</div>
-      <div class="skill">Leadership &amp; Coaching</div>
+      <div class="skill-bar">
+        <span>Electrical &amp; Automation</span>
+        <div class="bar-bg"><div class="bar" style="width: 93%"></div></div>
+      </div>
+      <div class="skill-bar">
+        <span>Project Management</span>
+        <div class="bar-bg"><div class="bar" style="width: 90%"></div></div>
+      </div>
+      <div class="skill-bar">
+        <span>Digital Transformation</span>
+        <div class="bar-bg"><div class="bar" style="width: 85%"></div></div>
+      </div>
+      <div class="skill-bar">
+        <span>Data Center Construction</span>
+        <div class="bar-bg"><div class="bar" style="width: 88%"></div></div>
+      </div>
+      <div class="skill-bar">
+        <span>Leadership &amp; Coaching</span>
+        <div class="bar-bg"><div class="bar" style="width: 92%"></div></div>
+      </div>
     </div>
   </section>
 
-  <!-- Experience Section -->
-  <section id="experience" class="section section-light">
-    <h2>Experience Highlights</h2>
-    <div class="cards">
-      <div class="card" tabindex="0">
+  <!-- Projects Section -->
+  <section id="projects" class="section section-light animate-in">
+    <h2>Selected Projects</h2>
+    <div class="project-cards">
+      <div class="project-card" tabindex="0">
         <h3>Data Center Buildout</h3>
-        <p>50 MSEK, +15% efficiency</p>
-        <span>2023</span>
+        <p class="subtitle">50 MSEK, +15% efficiency</p>
+        <button class="project-toggle" aria-label="Expand project details">Details</button>
+        <div class="project-details">
+          <ul>
+            <li>Led a cross-functional team to deliver a 50 MSEK data center.</li>
+            <li>Improved energy efficiency by 15% via automation and sustainable design.</li>
+            <li>Delivered project on time and under budget.</li>
+          </ul>
+        </div>
       </div>
-      <div class="card" tabindex="0">
+      <div class="project-card" tabindex="0">
         <h3>Healthcare Systems Upgrade</h3>
-        <p>100% uptime, regulatory compliance</p>
-        <span>2024</span>
+        <p class="subtitle">100% uptime, regulatory compliance</p>
+        <button class="project-toggle" aria-label="Expand project details">Details</button>
+        <div class="project-details">
+          <ul>
+            <li>Upgraded critical healthcare infrastructure with zero downtime.</li>
+            <li>Ensured full compliance with healthcare regulations.</li>
+            <li>Stakeholder management in high-stakes environments.</li>
+          </ul>
+        </div>
       </div>
-      <div class="card" tabindex="0">
+      <div class="project-card" tabindex="0">
         <h3>Lean Overhaul</h3>
-        <p>32× tool life, 1 MSEK savings/year</p>
-        <span>2021</span>
+        <p class="subtitle">32× tool life, 1 MSEK savings/year</p>
+        <button class="project-toggle" aria-label="Expand project details">Details</button>
+        <div class="project-details">
+          <ul>
+            <li>Implemented Lean processes for manufacturing efficiency.</li>
+            <li>Achieved dramatic increase in tool life and cost savings.</li>
+            <li>Trained and coached staff to ensure lasting impact.</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="section section-dark">
+  <section id="contact" class="section section-dark animate-in">
     <h2>Get in Touch</h2>
-    <p>Email: <a href="mailto:dannesoderqvist@gmail.com">dannesoderqvist@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/danielsoderqvist" target="_blank" rel="noopener">linkedin.com/in/danielsoderqvist</a></p>
+    <form id="contactForm" class="contact-form" autocomplete="off" novalidate>
+      <div class="form-group">
+        <label for="name">Name <span aria-hidden="true">*</span></label>
+        <input type="text" id="name" name="name" required maxlength="80" />
+      </div>
+      <div class="form-group">
+        <label for="email">Email <span aria-hidden="true">*</span></label>
+        <input type="email" id="email" name="email" required maxlength="80" />
+      </div>
+      <div class="form-group">
+        <label for="message">Message <span aria-hidden="true">*</span></label>
+        <textarea id="message" name="message" rows="5" required maxlength="2000"></textarea>
+      </div>
+      <button type="submit" class="button">Send Message</button>
+      <div class="form-feedback" id="formFeedback" aria-live="polite"></div>
+    </form>
+    <p style="margin-top:2rem">Or connect on <a href="https://linkedin.com/in/danielsoderqvist" target="_blank" rel="noopener">LinkedIn</a></p>
   </section>
 
   <footer>
-    <p>&copy; 2025 Daniel Söderqvist. Hosted on GitHub Pages &amp; Cloudflare.</p>
+    <p>&copy; 2025 Daniel Söderqvist. Hosted on GitHub Pages &amp; Cloudflare. <span class="footer-heart">❤</span></p>
   </footer>
 </body>
 </html>
