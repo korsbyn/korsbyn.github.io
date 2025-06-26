@@ -38,15 +38,6 @@ function animateSections() {
 window.addEventListener("scroll", animateSections);
 window.addEventListener("DOMContentLoaded", animateSections);
 
-// Animated skill bars
-window.addEventListener("DOMContentLoaded", () => {
-  setTimeout(() => {
-    document.querySelectorAll(".skill-bar").forEach(bar => {
-      bar.classList.add("visible");
-    });
-  }, 600);
-});
-
 // Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener("click", function(e) {
@@ -55,15 +46,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       e.preventDefault();
       target.scrollIntoView({ behavior: "smooth" });
     }
-  });
-});
-
-// Expandable project details
-document.querySelectorAll(".project-toggle").forEach(btn => {
-  btn.addEventListener("click", function(e) {
-    const card = this.closest(".project-card");
-    card.classList.toggle("expanded");
-    this.textContent = card.classList.contains("expanded") ? "Hide" : "Details";
   });
 });
 
