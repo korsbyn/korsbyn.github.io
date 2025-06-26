@@ -1,95 +1,49 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Daniel Söderqvist • Technical Program Manager</title>
-  <meta name="description" content="Technical Program Manager with expertise in infrastructure, automation, and digital transformation." />
-  <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
-</head>
-<body>
-  <nav class="navbar">
-    <div class="container">
-      <span class="logo">Daniel Söderqvist</span>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+<section id="skills" class="section bg-light">
+  <div class="container">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="skill">Project Management</div>
+      <div class="skill">Electrical & Automation</div>
+      <div class="skill">Lean & Agile</div>
+      <div class="skill">Infrastructure Strategy</div>
+      <div class="skill">Stakeholder Engagement</div>
+      <div class="skill">Regulatory Compliance</div>
     </div>
-  </nav>
+  </div>
+</section>
 
-  <header class="hero">
-    <div class="container hero-content">
-      <img src="profile.jpg" alt="Daniel Söderqvist" class="hero-image" />
-      <div class="hero-text">
-        <h1>Hi, I'm Daniel Söderqvist</h1>
-        <p>Technical Program Manager | Infrastructure | Automation | Innovation</p>
-        <a href="#contact" class="btn-primary">Get in Touch</a>
+<section id="projects" class="section">
+  <div class="container">
+    <h2>Projects</h2>
+    <div class="project-cards">
+      <div class="project-card">
+        <h3>Data Center Buildout</h3>
+        <p>Led a team to deliver a high-availability data center, boosting efficiency by 15%.</p>
+      </div>
+      <div class="project-card">
+        <h3>Healthcare Systems Upgrade</h3>
+        <p>Upgraded IT infrastructure with zero downtime and ensured full EU compliance.</p>
+      </div>
+      <div class="project-card">
+        <h3>Lean Manufacturing Overhaul</h3>
+        <p>Implemented Lean processes, saving 1M SEK annually through optimization.</p>
       </div>
     </div>
-  </header>
+  </div>
+</section>
 
-  <section id="about" class="section">
-    <div class="container">
-      <h2>About Me</h2>
-      <p>I’m Daniel Söderqvist, a strategic leader with 15+ years in electrical engineering, automation, and infrastructure. I deliver complex projects on time and within budget by bridging deep technical insight with clear strategic direction.</p>
-    </div>
-  </section>
-
-  <section id="skills" class="section section-alt">
-    <div class="container">
-      <h2>Core Skills</h2>
-      <ul class="skills-list">
-        <li>Project & Program Management</li>
-        <li>Electrical & Automation Systems</li>
-        <li>Digital Transformation</li>
-        <li>Lean & Process Optimization</li>
-        <li>Stakeholder Communication</li>
-        <li>Compliance & Risk Management</li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="projects" class="section">
-    <div class="container">
-      <h2>Selected Projects</h2>
-      <div class="projects-grid">
-        <div class="project-card">
-          <h3>Data Center Buildout</h3>
-          <p>Led cross-functional delivery of a high-availability facility increasing efficiency by 15%.</p>
-        </div>
-        <div class="project-card">
-          <h3>Healthcare Systems Upgrade</h3>
-          <p>Modernized IT infrastructure with zero downtime and full regulatory compliance.</p>
-        </div>
-        <div class="project-card">
-          <h3>Lean Manufacturing</h3>
-          <p>Introduced Lean principles saving 1M SEK annually through improved tooling and automation.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact" class="section section-alt">
-    <div class="container">
-      <h2>Contact</h2>
-      <form id="contactForm" class="contact-form">
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-        <button type="submit" class="btn-primary">Send</button>
-        <p id="formFeedback"></p>
-      </form>
-    </div>
-  </section>
-
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; 2025 Daniel Söderqvist. All rights reserved.</p>
-    </div>
-  </footer>
-</body>
-</html>
+<section id="contact" class="section bg-light">
+  <div class="container">
+    <h2>Contact</h2>
+    <form id="contactForm" class="contact-form">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Your Name" required />
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Your Email" required />
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn btn-secondary">Send Message</button>
+      <div id="formFeedback" class="form-feedback"></div>
+    </form>
+  </div>
+</section>
