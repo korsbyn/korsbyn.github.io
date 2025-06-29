@@ -1,0 +1,149 @@
+/* Baslayout */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #ffffff;
+  color: #222;
+  line-height: 1.6;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #111;
+  color: #fff;
+}
+nav .logo {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Hero */
+.hero {
+  background-size: cover;
+  background-position: center;
+  padding: 4rem 2rem;
+  color: #fff;
+  text-align: center;
+  position: relative;
+}
+.hero-content {
+  background: rgba(0, 0, 0, 0.6);
+  display: inline-block;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+.cta-button {
+  background-color: #fca311;
+  color: #000;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 1rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+.cta-button:hover {
+  background-color: #ffb700;
+}
+
+/* Sektioner */
+section {
+  padding: 4rem 2rem;
+}
+.container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Tjänster */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+.card {
+  background: #f8f8f8;
+  border-radius: 10px;
+  padding: 2rem;
+  text-align: center;
+}
+.card img {
+  width: 60px;
+  margin-bottom: 1rem;
+}
+
+/* Portfolio */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+.portfolio-item h4 {
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+/* Kontaktformulär */
+form {
+  display: grid;
+  gap: 1rem;
+}
+form input, form textarea {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+form button {
+  background-color: #14213d;
+  color: #fff;
+  padding: 0.8rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+form button:hover {
+  background-color: #1e2c4a;
+}
+
+/* Footer */
+footer {
+  background: #111;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 2rem;
+  margin-top: 4rem;
+}

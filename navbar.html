@@ -1,0 +1,41 @@
+<!-- Shared navigation bar for all pages -->
+<nav id="navbar">
+    <div class="nav-container">
+        <a href="index.html" class="logo">Daniel Söderqvist</a>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="index.html#portfolio">Portfolio</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+            <li><a href="projects.html">Project</a></li>
+            <li><a href="blog.html">Blog</a></li>
+        </ul>
+    </div>
+</nav>
+<script>
+// Hamburger menu for mobile
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('navLinks');
+hamburger.addEventListener('click', function() {
+    navLinks.classList.toggle('open');
+});
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', function() {
+        navLinks.classList.remove('open');
+    });
+});
+// Scroll effect for navbar (only on index, but safe to include)
+window.addEventListener('scroll', () => {
+    const navbar = document.getElementById('navbar');
+    if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+});
+</script>
