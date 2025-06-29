@@ -278,7 +278,9 @@
         }
 
         .about-image {
-            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .about-image::before {
@@ -289,7 +291,7 @@
             right: 20px;
             bottom: 20px;
             background: var(--tech-gradient);
-            border-radius: 20px;
+            border-radius: 50%; /* Gör även bakgrunden rund */
             z-index: -1;
         }
 
@@ -299,13 +301,16 @@
             background-image: url('profile.jpg');
             background-size: cover;
             background-position: center;
-            border-radius: 20px;
+            border-radius: 50%; /* Gör bilden rund */
+            aspect-ratio: 1/1; /* Gör den kvadratisk och rund på alla skärmar */
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
             font-size: 1.2rem;
             font-weight: 600;
+            overflow: hidden;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.10);
         }
 
         .about-img.fallback {
@@ -317,6 +322,14 @@
             font-size: 1.1rem;
             line-height: 1.8;
             color: var(--gray);
+        }
+
+        @media (max-width: 768px) {
+            .about-img {
+                height: 220px;
+                min-width: 0;
+                max-width: 80vw;
+            }
         }
 
         /* Services Section */
