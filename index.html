@@ -278,21 +278,27 @@
         }
 
         .about-image {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            position: relative;
+            border-radius: 24px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+            overflow: hidden;
+            background: #fff;
+            min-width: 260px;
+            max-width: 340px;
+            margin: 0 auto;
         }
 
         .about-image::before {
             content: '';
             position: absolute;
-            top: -20px;
-            left: -20px;
-            right: 20px;
-            bottom: 20px;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
             background: var(--tech-gradient);
-            border-radius: 50%; /* Gör även bakgrunden rund */
+            border-radius: 28px;
             z-index: -1;
+            opacity: 0.15;
         }
 
         .about-img {
@@ -301,8 +307,7 @@
             background-image: url('profile.jpg');
             background-size: cover;
             background-position: center;
-            border-radius: 50%; /* Gör bilden rund */
-            aspect-ratio: 1/1; /* Gör den kvadratisk och rund på alla skärmar */
+            border-radius: 20px; /* Tillbaka till tidigare design */
             display: flex;
             align-items: center;
             justify-content: center;
@@ -311,6 +316,7 @@
             font-weight: 600;
             overflow: hidden;
             box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+            border: 4px solid #fff;
         }
 
         .about-img.fallback {
@@ -329,6 +335,10 @@
                 height: 220px;
                 min-width: 0;
                 max-width: 80vw;
+            }
+            .about-image {
+                min-width: 0;
+                max-width: 90vw;
             }
         }
 
