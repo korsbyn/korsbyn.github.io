@@ -1,8 +1,6 @@
 [build]
   publish = "public"
-  command = "hugo"
+  command = "hugo --gc --minify --buildFuture"
 
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+[build.environment]
+  HUGO_VERSION = "0.125.4"
