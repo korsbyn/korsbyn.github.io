@@ -1,18 +1,42 @@
-backend:
-  name: github
-  repo: korsbyn/korsbyn.github.io
+﻿backend:
+  name: git-gateway
   branch: main
-  auth_endpoint: https://authomatic.dev/api/auth
 
-media_folder: "static/uploads"
-public_folder: "/uploads"
+media_folder: "static/images/uploads"
+public_folder: "/images/uploads"
 
 collections:
-  - name: "pages"
-    label: "Sidor"
-    folder: "content"
+  - name: "start"
+    label: "Startsida"
+    files:
+      - file: "content/_index.md"
+        label: "Startsida"
+        name: "start"
+        fields:
+          - { label: "Titel", name: "title", widget: "string" }
+          - { label: "Beskrivning", name: "description", widget: "text" }
+          - { label: "Hero-bild", name: "hero_image", widget: "image" }
+          - { label: "Innehåll", name: "body", widget: "markdown" }
+  - name: "blog"
+    label: "Blogg"
+    folder: "content/blog"
     create: true
     slug: "{{slug}}"
     fields:
       - { label: "Titel", name: "title", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Publiceringsdatum", name: "date", widget: "datetime" }
+      - { label: "Beskrivning", name: "description", widget: "text" }
+      - { label: "Taggar", name: "tags", widget: "list" }
+      - { label: "Innehåll", name: "body", widget: "markdown" }
+
+  - name: "projects"
+    label: "Projekt"
+    folder: "content/projects"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Titel", name: "title", widget: "string" }
+      - { label: "Datum", name: "date", widget: "datetime" }
+      - { label: "Bild", name: "image", widget: "image" }
+      - { label: "Beskrivning", name: "description", widget: "text" }
+      - { label: "Innehåll", name: "body", widget: "markdown" }
