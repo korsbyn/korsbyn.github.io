@@ -1,9 +1,6 @@
 backend:
-  name: github
-  repo: korsbyn/korsbyn.github.io
+  name: git-gateway
   branch: main
-  auth_endpoint: https://authomatic.dev/api/auth
-
 media_folder: "static/uploads"
 public_folder: "/uploads"
 
